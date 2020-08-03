@@ -22,3 +22,8 @@ def tac():
 @main.route('/success/Thank-You')
 def success():
     return render_template('success.html')
+
+@main.route('/linking-account')
+def linking():
+    return render_template('linking.html')
+

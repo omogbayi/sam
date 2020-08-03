@@ -1,7 +1,8 @@
 function startMoving(){
     var progress = document.getElementById("progress");
+    var time = 100
     var width = 0;
-    var id = setInterval(frame, 10000);
+    var id = setInterval(frame, 1000);
     document.getElementById("btn-tac-request").style.display = "none"
     progress.style.backgroundColor = "#3e70ef"
     function frame(){
@@ -10,15 +11,18 @@ function startMoving(){
             document.getElementById("another-tac-request").classList.remove("hide");
         }else{
             width++;
+            time --;
             if(width > 50 && width < 70 ){
                 progress.style.backgroundColor = "#efbf3e";
             }else if(width > 70){
                 progress.style.backgroundColor = "red";
             }
             progress.style.width = width + '%';
+            progress.innerHTML = width;
         }
     }
 }
+
 
 function showForm(){
     document.getElementById("tac-form").classList.remove("hide-tac-form");

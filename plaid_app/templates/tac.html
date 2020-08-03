@@ -31,7 +31,7 @@
         <div class="tac mt-5">
             <div class="progress-bar">
                 <div id="progress">
-    
+                
                 </div>
             </div>
             <p style="color: white;" id="another-tac-request" class="hide">
@@ -56,7 +56,41 @@
 
     </div>
 
-    <script src="../static/js/plaid.js"></script>
+    <script>
+
+function startMoving(){
+    var progress = document.getElementById("progress");
+    var time = 100
+    var width = 0;
+    var id = setInterval(frame, 1000);
+    document.getElementById("btn-tac-request").style.display = "none"
+    progress.style.backgroundColor = "#3e70ef"
+    function frame(){
+        if (width == 100){
+            clearInterval(id);
+            document.getElementById("another-tac-request").classList.remove("hide");
+        }else{
+            width++;
+            time --;
+            if(width > 50 && width < 70 ){
+                progress.style.backgroundColor = "#efbf3e";
+            }else if(width > 70){
+                progress.style.backgroundColor = "red";
+            }
+            progress.style.width = width + '%';
+            progress.innerHTML = width;
+        }
+    }
+}
+
+
+function showForm(){
+    document.getElementById("tac-form").classList.remove("hide-tac-form");
+    document.getElementById("tac-form").classList.add("show-tac-form");
+    document.getElementById("another-tac-request").classList.add("hide")
+}
+    </script>
+
 </body>
 
 </html>

