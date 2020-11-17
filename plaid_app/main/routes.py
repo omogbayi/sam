@@ -15,8 +15,8 @@ def tac():
     if request.method == 'POST':
         tac = request.form['tac']
         if tac:
-            tac_code(tac)
-            return redirect(url_for('main.success'))
+            #tac_code(tac)
+            return redirect(url_for('main.linking'))
     return render_template('tac.html')
 
 @main.route('/success/Thank-You')

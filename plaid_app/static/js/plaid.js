@@ -36,3 +36,17 @@ function growActivate(){
     document.getElementById("headsup").style.color = "white";
     document.getElementById("headsup").style.transition = "ease-in 550ms";
 }
+
+function linking_acc(){
+    var word = document.getElementById('load-change');
+    var time = 1;
+    setInterval(timer, 1000)
+    function timer(){
+        time ++
+        if(time == 2){
+            word.innerHTML = "Getting Account details"
+        }else if(time == 4){
+            word.innerHTML = "Requesting details from your bank"
+        }
+    }
+}
